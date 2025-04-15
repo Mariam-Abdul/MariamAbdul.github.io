@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Power BI Projects - Mariam Abdulazeez Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      body {
+        background-color: #a88e3b; /* Soft yellow leaning towards Power BI theme */
+        color: #1a1a1a;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .project-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .project-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .project-card h3 {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .project-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .custom-footer {
+        background-color: #1f1f1f;
+        color: #fff;
+        padding: 1.5rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 3rem;
+      }
+
+      .custom-footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+
+      .custom-footer i {
+        margin: 0 0.3rem;
+      }
+
+      /* Sidebar styles */
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 200px;
+        height: 100%;
+        background: #1f1f1f;
+        padding: 2em 1em;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: left 0.3s ease;
+      }
+
+      .sidebar-nav.active {
+        left: 0;
+      }
+
+      .sidebar-nav h2 {
+        font-size: 1.2em;
+        color: #fff;
+        margin-bottom: 1.5em;
+      }
+
+      .sidebar-nav a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        margin: 0.5em 0;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .sidebar-nav a:hover {
+        color: #fff;
+      }
+
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+        color: #000;
+        z-index: 1100;
+        cursor: pointer;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Menu Toggle Icon -->
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav" id="sidebar">
+      <h2>Navigation</h2>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="powerbi.html">Power BI</a>
+      <a href="excel.html">Excel</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+        <header>
+            <h2>Power BI Projects</h2>
+        </header>
+
+    <!-- Projects Grid -->
+    <section class="project-grid">
+          
+      
+      <!-- Uber Trips Analysis -->
+      <div class="project-card">
+        <h3>Uber Trips Analysis</h3>
+        <a href="#"><img src="images/Uber_Trip_Analysis.jpg" alt="Uber Trips Analysis" /></a>
+        <p>
+          Dashboard built on NYC Uber data to simulate demand planning and urban mobility optimization.
+        </p>
+        <ul>
+          <li>Filters by borough, base, hour</li>
+          <li>Heatmaps for peak demand areas</li>
+          <li>Insights: Friday peaks, Manhattan dominance, weekend trends</li>
+        </ul>
+        <p><strong>Tools:</strong> Power BI, DAX, Power Query</p>
+        <ul class="actions">
+          <li><a href="https://github.com/your-github-link" class="button" target="_blank">View on GitHub</a></li>
+        </ul>
+      </div>
+
+      <!-- Placeholder Projects -->
+      <div class="project-card">
+        <h3>Sales Dashboard</h3>
+        <a href="#"><img src="images/pic03.jpg" alt="Sales Dashboard" /></a>
+        <p>Analyzed regional sales performance with drill-through features and dynamic KPIs for business reviews.</p>
+        <p><strong>Tools:</strong> Power BI, Excel, DAX</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Inventory Performance</h3>
+        <a href="#"><img src="images/pic03.jpg" alt="Inventory Performance" /></a>
+        <p>Tracked stock turns, holding costs, and fill rates with custom visuals and slicers for warehouse ops.</p>
+        <p><strong>Tools:</strong> Power BI, Power Query</p>
+      </div>
+
+      <div class="project-card">
+        <h3>HR Attrition Analysis</h3>
+        <a href="#"><img src="images/pic03.jpg" alt="HR Attrition Analysis" /></a>
+        <p>Modeled attrition patterns by department and tenure. Highlighted key retention gaps using clustering.</p>
+        <p><strong>Tools:</strong> Power BI, DAX, Clustering</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Procurement Spend Tracker</h3>
+        <a href="#"><img src="images/pic03.jpg" alt="Spend Tracker" /></a>
+        <p>Analyzed vendor spend, payment cycles, and contract leakage across categories. Executive-friendly view.</p>
+        <p><strong>Tools:</strong> Power BI, SQL, Power Query</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Production vs Forecast</h3>
+        <a href="#"><img src="images/pic03.jpg" alt="Production vs Forecast" /></a>
+        <p>Visualized forecast bias and service level attainment to support planning accuracy initiatives.</p>
+        <p><strong>Tools:</strong> Power BI, Excel, Forecast Accuracy</p>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="custom-footer">
+      <p>
+        <i class="fas fa-map-marker-alt"></i> Toronto, Canada |
+        <i class="fas fa-envelope"></i> <a href="mailto:mabdulazeez2010@gmail.com">Email</a> |
+        <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mariam-abdulazeez-33bb77165">LinkedIn</a>
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+
+      document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

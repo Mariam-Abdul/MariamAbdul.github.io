@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>About - Mariam Abdulazeez Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      #about {
+        background-color: #342b2b;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      #about ul {
+        list-style-position: inside;
+        text-align: left;
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      #about .image.main img {
+        max-width: 250px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        margin: 2rem auto;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Sidebar styles */
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 200px;
+        height: 100%;
+        background: #1f1f1f;
+        padding: 2em 1em;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: left 0.3s ease;
+      }
+
+      .sidebar-nav.active {
+        left: 0;
+      }
+
+      .sidebar-nav h2 {
+        font-size: 1.2em;
+        color: #fff;
+        margin-bottom: 1.5em;
+      }
+
+      .sidebar-nav a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        margin: 0.5em 0;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .sidebar-nav a:hover {
+        color: #fff;
+      }
+
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+        color: #fff;
+        z-index: 1100;
+        cursor: pointer;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Menu Toggle Icon -->
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav" id="sidebar">
+      <h2>Navigation</h2>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="powerbi.html">Power BI</a>
+      <a href="excel.html">Excel</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+    <!-- Main Section -->
+    <section id="about">
+      <header class="major">
+        <h2>About Me</h2>
+      </header>
+      <div class="image main">
+        <img src="images/Myphoto2.jpg" alt="Mariam Abdulazeez" />
+      </div>
+      <p>
+        I'm a data-driven supply chain professional with over 8 years of experience delivering impactful planning, forecasting, and analytics solutions.
+        My expertise spans demand planning, KPI reporting, and operations analysis — helping businesses improve efficiency, reduce costs, and make smarter decisions.
+      </p>
+      <p>
+        Since relocating to Ontario, Canada, I've been refining my technical skill set across Excel, Power BI, and SQL, while building a portfolio that reflects real-world planning and supply chain challenges.
+        With a proven track record in data-backed decision-making, I'm ready to contribute to organizations looking for a planner who can deliver value from day one.
+      </p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>Excel (Advanced: PivotTables, Power Query, Dashboards)</li>
+        <li>Power BI (DAX, Data Modeling, Storytelling)</li>
+        <li>SQL (Joins, CTEs, Window Functions)</li>
+        <li>Python (Pandas, Matplotlib)</li>
+        <li>Supply Chain Analytics • Forecasting • KPI Reporting</li>
+      </ul>
+
+      <h3>Experience Highlights</h3>
+      <ul>
+        <li>Improved forecast accuracy by 15% by analyzing historical sales, seasonality, and distributor behavior</li>
+        <li>Developed executive-level KPI dashboards and supply chain reports using Power BI and Excel for monthly S&OP meetings</li>
+        <li>Led cross-functional initiatives between planning, procurement, and logistics teams to reduce stockouts and optimize inventory turns</li>
+        <li>Standardized reporting processes, reducing manual analysis time by 40% and enabling faster decision-making</li>
+        <li>Currently pursuing certifications: CBAP, PL-300, and ASCM CPIM</li>
+      </ul>
+
+      <ul class="actions special">
+        <li><a href="#" class="button large">View Projects</a></li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="custom-footer">
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Toronto, Canada |
+          <i class="fas fa-envelope"></i> <a href="mailto:mabdulazeez2010@gmail.com">Email</a> |
+          <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mariam-abdulazeez-33bb77165">LinkedIn</a>
+        </p>
+      </footer>
+
+    <!-- Scripts -->
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+
+      document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>

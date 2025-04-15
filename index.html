@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Mariam Abdulazeez Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* Sidebar styles */
+      .sidebar-nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 200px;
+        height: 100%;
+        background: #1f1f1f;
+        padding: 2em 1em;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transition: left 0.3s ease;
+      }
+
+      .sidebar-nav.active {
+        left: 0;
+      }
+
+      .sidebar-nav h2 {
+        font-size: 1.2em;
+        color: #fff;
+        margin-bottom: 1.5em;
+      }
+
+      .sidebar-nav a {
+        display: block;
+        color: #ccc;
+        text-decoration: none;
+        margin: 0.5em 0;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .sidebar-nav a:hover {
+        color: #fff;
+      }
+
+      /* Menu button */
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+        color: #fff;
+        z-index: 1100;
+        cursor: pointer;
+      }
+
+      /* Center content */
+      .intro {
+        display: flex;
+        align-items: middle;
+        justify-content: middle;
+        text-align: middle;
+        height: 100vh;
+      }
+
+      .intro header h1,
+      .intro header p {
+        color: #fff;
+      }
+
+      /* Footer */
+      .custom-footer {
+        text-align: center;
+        padding: 2em 1em;
+        font-size: 0.9em;
+        color: #888;
+        background: #2c2c2c;
+      }
+
+      .custom-footer a {
+        color: #aaa;
+        text-decoration: none;
+        margin: 0 0.5em;
+      }
+
+      .custom-footer a:hover {
+        color: #fff;
+      }
+
+      /* Overlay for closing sidebar */
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 900;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Menu Toggle Icon -->
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar-nav" id="sidebar">
+      <h2>Navigation</h2>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="powerbi.html">Power BI</a>
+      <a href="excel.html">Excel</a>
+      <a href="sql.html">SQL</a>
+      <a href="python.html">Python</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Intro -->
+      <section class="intro">
+        <header>
+          <h1>Mariam Abdulazeez<br/> Portfolio</h1>
+          <p>Data & Supply Chain Analyst | Excel • Power BI • SQL • Python</p>
+          <p><a href="https://linkedin.com/in/mariam-abdulazeez-33bb77165">@MariamAbdulazeez</a></p>
+        </header>
+      </section>
+      <ul class="actions">
+        <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+    </ul>
+      <!-- Footer -->
+      <footer class="custom-footer">
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Toronto, Canada |
+          <i class="fas fa-envelope"></i> <a href="mailto:mabdulazeez2010@gmail.com">Email</a> |
+          <i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/mariam-abdulazeez-33bb77165">LinkedIn</a>
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+
+      document.querySelectorAll('.sidebar-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          sidebar.classList.remove('active');
+          overlay.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+</html>
